@@ -1,0 +1,173 @@
+<?xml version="1.0"?>
+<config>
+    <sections>
+        <tradedoubler module="affiliate">
+            <tab>sales</tab>
+            <label>TradeDoubler</label>
+            <sort_order>9002</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>0</show_in_website>
+            <show_in_store>0</show_in_store>
+            <groups>
+              <general>
+                  <label>General Settings</label>
+                  <expanded>1</expanded>
+                  <sort_order>0</sort_order>
+                  <show_in_default>1</show_in_default>
+                  <show_in_website>0</show_in_website>
+                  <show_in_store>0</show_in_store>
+                  <fields>
+                      <enable_debug>
+                          <label>Enable Debug Mode</label>
+                          <validate>required-entry</validate>
+                          <frontend_type>select</frontend_type>
+                          <source_model>adminhtml/system_config_source_yesno</source_model>
+                          <default>0</default>
+                          <sort_order>1</sort_order>
+                          <show_in_default>1</show_in_default>
+                          <show_in_website>0</show_in_website>
+                          <show_in_store>0</show_in_store>
+                          <comment><![CDATA[
+                              Enable to output a detailled log to your <i>log</i> directory as well as to your browser's JavaScript console in the frontend.
+                          ]]></comment>
+                      </enable_debug>
+                  </fields>
+              </general>
+                <redirect_page>
+                    <label>Redirect Page URL</label>
+                    <expanded>1</expanded>
+                    <sort_order>1</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>0</show_in_website>
+                    <show_in_store>0</show_in_store>
+                    <comment><![CDATA[
+                    <p>
+                    You can find the redirect page under the following path: /tradedoubler/redirect/, for example: <i>http://www.myshop.com/tradedoubler/redirect/</i>
+                    </p>
+                    ]]></comment>
+                </redirect_page>
+                <retargeting module="affiliate">
+                  <label>Retargeting Tags</label>
+                  <expanded>1</expanded>
+                  <sort_order>2</sort_order>
+                  <show_in_default>1</show_in_default>
+                  <show_in_website>0</show_in_website>
+                  <show_in_store>0</show_in_store>
+                  <fields>
+                      <enabled>
+                          <label>Enabled</label>
+                          <validate>required-entry</validate>
+                          <frontend_type>select</frontend_type>
+                          <source_model>adminhtml/system_config_source_yesno</source_model>
+                          <default>0</default>
+                          <sort_order>1</sort_order>
+                          <show_in_default>1</show_in_default>
+                          <show_in_website>0</show_in_website>
+                          <show_in_store>0</show_in_store>
+                          <comment><![CDATA[
+                            Enable or disable the retargeting tags.
+                          ]]></comment>
+                      </enabled>
+                      <container_tag_id>
+                          <label>Container Tag ID</label>
+                          <validate>required-entry</validate>
+                          <frontend_type>text</frontend_type>
+                          <sort_order>2</sort_order>
+                          <show_in_default>1</show_in_default>
+                          <show_in_website>0</show_in_website>
+                          <show_in_store>0</show_in_store>
+                          <comment><![CDATA[
+                            Enter your «Container Tag ID» as provided by TradeDoubler.
+                          ]]></comment>
+                      </container_tag_id>
+                  </fields>
+                </retargeting>
+                <purchase_trackback module="affiliate">
+                  <label>Purchase Trackback</label>
+                  <expanded>1</expanded>
+                  <sort_order>3</sort_order>
+                  <show_in_default>1</show_in_default>
+                  <show_in_website>0</show_in_website>
+                  <show_in_store>0</show_in_store>
+                  <fields>
+                      <enabled>
+                          <label>Enabled</label>
+                          <validate>required-entry</validate>
+                          <frontend_type>select</frontend_type>
+                          <source_model>adminhtml/system_config_source_yesno</source_model>
+                          <default>0</default>
+                          <sort_order>1</sort_order>
+                          <show_in_default>1</show_in_default>
+                          <show_in_website>0</show_in_website>
+                          <show_in_store>0</show_in_store>
+                          <comment><![CDATA[
+                            Enable or disable the trackback pixel on the purchase page.
+                          ]]></comment>
+                      </enabled>
+                      <base_url>
+                          <label>Base URL</label>
+                          <validate>required-entry</validate>
+                          <frontend_type>text</frontend_type>
+                          <default>http://tbs.tradedoubler.com/report?</default>
+                          <sort_order>2</sort_order>
+                          <show_in_default>1</show_in_default>
+                          <show_in_website>0</show_in_website>
+                          <show_in_store>0</show_in_store>
+                          <comment><![CDATA[
+                            The base URL for the tracking pixel as provided by TradeDoubler, for example <i>http://tbs.tradedoubler.com/report?</i>
+                          ]]></comment>
+                      </base_url>
+                      <organization_id>
+                          <label>Organization ID</label>
+                          <validate>required-entry</validate>
+                          <frontend_type>text</frontend_type>
+                          <sort_order>3</sort_order>
+                          <show_in_default>1</show_in_default>
+                          <show_in_website>0</show_in_website>
+                          <show_in_store>0</show_in_store>
+                          <comment><![CDATA[
+                            Enter your «Organization ID» as provided by TradeDoubler.
+                          ]]></comment>
+                      </organization_id>
+                      <event_id>
+                          <label>Event ID</label>
+                          <validate>required-entry</validate>
+                          <frontend_type>text</frontend_type>
+                          <sort_order>4</sort_order>
+                          <show_in_default>1</show_in_default>
+                          <show_in_website>0</show_in_website>
+                          <show_in_store>0</show_in_store>
+                          <comment><![CDATA[
+                            Enter your «Event ID» as provided by TradeDoubler.
+                          ]]></comment>
+                      </event_id>
+                      <checksum_code>
+                          <label>Checksum Code</label>
+                          <validate>required-entry</validate>
+                          <frontend_type>text</frontend_type>
+                          <sort_order>5</sort_order>
+                          <show_in_default>1</show_in_default>
+                          <show_in_website>0</show_in_website>
+                          <show_in_store>0</show_in_store>
+                          <comment><![CDATA[
+                            Enter your «Checksum Code» as provided by TradeDoubler.
+                          ]]></comment>
+                      </checksum_code>
+                      <checksum_code_2>
+                          <label>Checksum Code 2</label>
+                          <validate>required-entry</validate>
+                          <frontend_type>text</frontend_type>
+                          <sort_order>6</sort_order>
+                          <show_in_default>1</show_in_default>
+                          <show_in_website>0</show_in_website>
+                          <show_in_store>0</show_in_store>
+                          <comment><![CDATA[
+                            Enter your «Checksum Code 2» as provided by TradeDoubler.
+                          ]]></comment>
+                      </checksum_code_2>
+                  </fields>
+                </purchase_trackback>
+            </groups>
+        </tradedoubler>
+    </sections>
+</config>

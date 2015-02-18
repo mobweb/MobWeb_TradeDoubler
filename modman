@@ -1,0 +1,10 @@
+app/code/community/MobWeb/TradeDoubler app/code/community/MobWeb/TradeDoubler/
+
+app/design/frontend/base/default/layout/mobweb_tradedoubler.xml app/design/frontend/base/default/layout/mobweb_tradedoubler.xml
+
+app/etc/modules/MobWeb_TradeDoubler.xml app/etc/modules/MobWeb_TradeDoubler.xml
+
+skin/frontend/base/default/js/mobweb/tradedoubler skin/frontend/base/default/js/mobweb/tradedoubler/
+
+# Clear the cache
+@shell   rm -rf $PROJECT/var/cache/* && echo "Magento Cache cleared"
