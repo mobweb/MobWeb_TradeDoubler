@@ -16,13 +16,13 @@ Install using [colinmollenhour/modman](https://github.com/colinmollenhour/modman
 
 ## Configuration
 
-In your shop's configuration under **System -> Configuration**, a new tab named **TradeDoubler* has been added. Here you have to enter your account data as provided by TradeDoubler.
+In your shop's configuration under *System -> Configuration*, a new tab named *TradeDoubler* has been added. Here you have to enter your account data as provided by TradeDoubler.
 
-You will also have to submit the URL for the redirect page to your TradeDoubler customer service representative. This URL is: **your-shops-base-url.com/tradedoubler/redirect*.
+You will also have to submit the URL for the redirect page to your TradeDoubler customer service representative. This URL is: *your-shops-base-url.com/tradedoubler/redirect*.
 
-Everything else works out of the box. To inspect the retargeting tags and the trackback pixel, either check your page's source-code directly, or activate the **Debug Mode** in this extension's settings and activate your browser's development console to view the data for each page directly in your development console.
+Everything else works out of the box. To inspect the retargeting tags and the trackback pixel, either check your page's source-code directly, or activate the *Debug Mode* in this extension's settings and activate your browser's development console to view the data for each page directly in your development console.
 
-If you need to modify the data that is submitted to TradeDoubler (for example if your store uses a different attribute for the Product Description), you need to modify the **RetargetingTag.php** script directly.
+If you need to modify the data that is submitted to TradeDoubler (for example if your store uses a different attribute for the Product Description), you need to modify the *RetargetingTag.php* script directly.
 
 ## Questions? Need help?
 
