@@ -26,7 +26,7 @@ class MobWeb_TradeDoubler_Helper_Data extends Mage_Core_Helper_Abstract
 		$output = str_replace('"', "'", substr(json_encode($output), 1, -1));
 
 		// Log the data into the console
-		$return .= sprintf('' .
+		$return = sprintf('' .
 		'<script>
 			console.log("MobWeb_TradeDoubler: %s");
 			console.log("%s");
