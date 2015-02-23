@@ -212,7 +212,7 @@ class MobWeb_TradeDoubler_Block_RetargetingTag extends Mage_Core_Block_Abstract
 				$orderProductData['price'] = $orderItem->getPriceInclTax();
 				$orderProductData['currency'] = Mage::helper('tradedoubler')->getCurrentCurrency();
 				$orderProductData['name'] = $orderProduct->getName();
-				$orderProductData['grpId'] = $orderProductParentProduct ? $orderProductParentProduct->getId() : NULL;
+				$orderProductData['grpId'] = isset($orderProductParentProduct) ? $orderProductParentProduct->getId() : NULL;
 				$orderProductData['qty'] = $orderItem->getQtyOrdered();
 
 				$products[] = $orderProductData;
