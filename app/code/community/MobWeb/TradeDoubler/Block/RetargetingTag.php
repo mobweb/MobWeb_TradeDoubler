@@ -231,6 +231,12 @@ class MobWeb_TradeDoubler_Block_RetargetingTag extends Mage_Core_Block_Abstract
 		return $data;
 	}
 
+	public function getStaticData()
+	{
+		$src = Mage::getBaseUrl('js') . 'mobweb_tradedoubler/tradedoubler_static.js';
+		return sprintf('<script type="text/javascript" src="%s"></script>', $src);
+	}
+
 	protected function _toHtml()
 	{
 		// If the tags are disabled, don't do anything
@@ -276,6 +282,9 @@ class MobWeb_TradeDoubler_Block_RetargetingTag extends Mage_Core_Block_Abstract
 		if(Mage::helper('tradedoubler')->getIsDebug()) {
 			$return .= Mage::helper('tradedoubler')->prepareJsConsoleScript($markup, 'Retargeting tag:');
 		}
+
+		// Append the script that contains the static data
+		$return .= $this->getStaticData();
 
 		// Return the tag so that it can be printed
 		return $return;
