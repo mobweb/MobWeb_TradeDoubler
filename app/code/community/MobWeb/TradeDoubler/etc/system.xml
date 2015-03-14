@@ -68,8 +68,8 @@
                             Enable or disable the retargeting tags.
                           ]]></comment>
                       </enabled>
-                      <container_tag_id>
-                          <label>Container Tag ID</label>
+                      <container_tag_id_general>
+                          <label>Container Tag ID (General)</label>
                           <validate>required-entry</validate>
                           <frontend_type>text</frontend_type>
                           <sort_order>2</sort_order>
@@ -77,9 +77,57 @@
                           <show_in_website>0</show_in_website>
                           <show_in_store>0</show_in_store>
                           <comment><![CDATA[
-                            Enter your «Container Tag ID» as provided by TradeDoubler.
+                            Enter your «Container Tag ID» for the frontpage and «non product specific pages», as provided by TradeDoubler.
                           ]]></comment>
-                      </container_tag_id>
+                      </container_tag_id_general>
+                      <container_tag_id_product_listing>
+                          <label>Container Tag ID (Product listing)</label>
+                          <validate>required-entry</validate>
+                          <frontend_type>text</frontend_type>
+                          <sort_order>3</sort_order>
+                          <show_in_default>1</show_in_default>
+                          <show_in_website>0</show_in_website>
+                          <show_in_store>0</show_in_store>
+                          <comment><![CDATA[
+                            Enter your «Container Tag ID» for the product listing pages, as provided by TradeDoubler.
+                          ]]></comment>
+                      </container_tag_id_product_listing>
+                      <container_tag_id_product>
+                          <label>Container Tag ID (Product)</label>
+                          <validate>required-entry</validate>
+                          <frontend_type>text</frontend_type>
+                          <sort_order>4</sort_order>
+                          <show_in_default>1</show_in_default>
+                          <show_in_website>0</show_in_website>
+                          <show_in_store>0</show_in_store>
+                          <comment><![CDATA[
+                            Enter your «Container Tag ID» for the product pages, as provided by TradeDoubler.
+                          ]]></comment>
+                      </container_tag_id_product>
+                      <container_tag_id_cart>
+                          <label>Container Tag ID (Cart)</label>
+                          <validate>required-entry</validate>
+                          <frontend_type>text</frontend_type>
+                          <sort_order>5</sort_order>
+                          <show_in_default>1</show_in_default>
+                          <show_in_website>0</show_in_website>
+                          <show_in_store>0</show_in_store>
+                          <comment><![CDATA[
+                            Enter your «Container Tag ID» for the cart, as provided by TradeDoubler.
+                          ]]></comment>
+                      </container_tag_id_cart>
+                      <container_tag_id_purchase>
+                          <label>Container Tag ID (Purchase)</label>
+                          <validate>required-entry</validate>
+                          <frontend_type>text</frontend_type>
+                          <sort_order>6</sort_order>
+                          <show_in_default>1</show_in_default>
+                          <show_in_website>0</show_in_website>
+                          <show_in_store>0</show_in_store>
+                          <comment><![CDATA[
+                            Enter your «Container Tag ID» for the purchase page, as provided by TradeDoubler.
+                          ]]></comment>
+                      </container_tag_id_purchase>
                   </fields>
                 </retargeting>
                 <purchase_trackback module="tradedoubler">

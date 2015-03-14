@@ -11,6 +11,9 @@ class MobWeb_TradeDoubler_Block_RetargetingTag extends Mage_Core_Block_Abstract
 		$data = array();
 		$data['protocol'] = 'document.location.protocol';
 
+		// Get the container tag ID for this specific page type
+		$data['containerTagId'] = Mage::helper('tradedoubler')->getSettings('retargeting/container_tag_id_general');
+
 		return $data;
 	}
 
@@ -63,6 +66,9 @@ class MobWeb_TradeDoubler_Block_RetargetingTag extends Mage_Core_Block_Abstract
 
 		$data['products'] = $currentlyListedProducts;
 
+		// Get the container tag ID for this specific page type
+		$data['containerTagId'] = Mage::helper('tradedoubler')->getSettings('retargeting/container_tag_id_product_listing');
+
 		return $data;
 	}
 
@@ -99,6 +105,9 @@ class MobWeb_TradeDoubler_Block_RetargetingTag extends Mage_Core_Block_Abstract
 		} else {
 			Mage::helper('tradedoubler')->log(sprintf('getProductPageData: Illegal / unknown product object: %s', print_r($product, true)));
 		}
+
+		// Get the container tag ID for this specific page type
+		$data['containerTagId'] = Mage::helper('tradedoubler')->getSettings('retargeting/container_tag_id_product');
 
 		return $data;
 	}
@@ -146,6 +155,9 @@ class MobWeb_TradeDoubler_Block_RetargetingTag extends Mage_Core_Block_Abstract
 		}
 
 		$data['products'] = $currentCartProducts;
+
+		// Get the container tag ID for this specific page type
+		$data['containerTagId'] = Mage::helper('tradedoubler')->getSettings('retargeting/container_tag_id_cart');
 
 		return $data;
 	}
@@ -228,6 +240,9 @@ class MobWeb_TradeDoubler_Block_RetargetingTag extends Mage_Core_Block_Abstract
 		$data['voucherCode'] = $order->getCouponCode();
 		$data['validOn'] = NULL;
 
+		// Get the container tag ID for this specific page type
+		$data['containerTagId'] = Mage::helper('tradedoubler')->getSettings('retargeting/container_tag_id_purchase');
+
 		return $data;
 	}
 
@@ -267,9 +282,6 @@ class MobWeb_TradeDoubler_Block_RetargetingTag extends Mage_Core_Block_Abstract
 				$data = $this->getDefaultPageData();
 			break;
 		}
-
-		// The container tag ID is the same for every page, append it
-		$data['containerTagId'] = Mage::helper('tradedoubler')->getSettings('retargeting/container_tag_id');
 
 		// Prepare the markup
 		$markup = "var TDConf = TDConf || {}; \n TDConf.Config = %s";
