@@ -235,7 +235,7 @@ class MobWeb_TradeDoubler_Block_RetargetingTag extends Mage_Core_Block_Abstract
 
 		$data['products'] = $products;
 		$data['orderId'] = $orderId;
-		$data['orderValue'] = $order->getGrandTotal();
+		$data['orderValue'] = $order->getSubtotal();
 		$data['currency'] = Mage::helper('tradedoubler')->getCurrentCurrency();
 		$data['voucherCode'] = $order->getCouponCode();
 		$data['validOn'] = NULL;
