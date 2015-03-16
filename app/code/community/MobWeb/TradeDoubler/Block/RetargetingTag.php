@@ -143,7 +143,7 @@ class MobWeb_TradeDoubler_Block_RetargetingTag extends Mage_Core_Block_Abstract
 			if($cartProduct INSTANCEOF Mage_Catalog_Model_Product) {
 
 				$cartProductData['id'] = $cartProduct->getId();
-				$cartProductData['price'] = $cartItem->getPriceInclTax();
+				$cartProductData['price'] = $cartItem->getPrice();
 				$cartProductData['currency'] = Mage::helper('tradedoubler')->getCurrentCurrency();
 				$cartProductData['name'] = $cartProduct->getName();
 				$cartProductData['qty'] = $cartItem->getQty();
@@ -221,7 +221,7 @@ class MobWeb_TradeDoubler_Block_RetargetingTag extends Mage_Core_Block_Abstract
 				}
 
 				$orderProductData['id'] = $orderProduct->getId();
-				$orderProductData['price'] = $orderItem->getPriceInclTax();
+				$orderProductData['price'] = $orderItem->getPrice();
 				$orderProductData['currency'] = Mage::helper('tradedoubler')->getCurrentCurrency();
 				$orderProductData['name'] = $orderProduct->getName();
 				$orderProductData['grpId'] = isset($orderProductParentProduct) ? $orderProductParentProduct->getId() : NULL;
