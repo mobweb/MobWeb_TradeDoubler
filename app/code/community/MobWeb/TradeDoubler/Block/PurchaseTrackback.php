@@ -26,7 +26,7 @@ class MobWeb_TradeDoubler_Block_PurchaseTrackback extends Mage_Core_Block_Abstra
 
 		// Get the dynamic values from the order that was just submitted
 		$orderNumber = $lastOrderId;
-		$orderValue = $lastOrder->getGrandTotal();
+		$orderValue = $lastOrder->getSubtotal();
 		$currency = Mage::helper('tradedoubler')->getCurrentCurrency();
 		$voucherCode = $lastOrder->getCouponCode();
 
